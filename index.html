@@ -492,7 +492,13 @@
       <h2 class="section-title" style="margin: 3rem 0 1.5rem;">Non-Technical
         <span>Skills</span></h2>
       <div class="skills-grid"
-        style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+       style="
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  justify-items: center;
+">
         <!-- Fast Learning → Rocket -->
         <div class="skill-item"><img src="fast.svg" alt="Fast Learning"
             style="width:52px; filter: hue-rotate(120deg);" /><span>Fast
@@ -649,18 +655,26 @@
           target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/Uv1812" target="_blank"><i
             class="fab fa-github"></i></a>
-    <a href="mailto:urvishagothadiya1812@gmail.com?subject=AI/ML%20Internship%20Opportunity&body=Hi%20Urvisha,%20A%20AI%20found%20your%20portfolio%20impressive%20and%20would%20like%20to%20discuss%20opportunities.%20A%20ABest," 
+    <a href="mailto:urvishagothadiya1812@gmail.com?subject=AI/ML%20Internship%20Opportunity&body=Hi%20Urvisha,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect." 
    onclick="smartEmail('urvishagothadiya1812@gmail.com', 'Portfolio Inquiry', 'Hi Urvisha,\n\nI came across your portfolio and would love to connect.\n\nLet\'s talk AI!')">
   <i class="fas fa-envelope"></i>
 </a>
   </a>
       </div>
-      <p style="margin-top:3.5rem;">
-        <span
-          style="cursor:pointer; color:var(--teal); font-weight:bold; font-size:1.5rem; padding:12px 24px; border:2px dashed var(--teal); border-radius:24px;"
-          onclick="copyEmail()">urvishagothadiya1812@gmail.com (Click to
-          copy)</span>
-      </p>
+     <p style="text-align:center; margin-top:2.5rem;">
+  <span style="
+    cursor:pointer;
+    color:var(--teal);
+    font-weight:bold;
+    font-size:1.5rem;
+    padding:12px 24px;
+    border:2px dashed var(--teal);
+    border-radius:24px;
+    display:inline-block;
+  " onclick="copyEmail()">
+    urvishagothadiya1812@gmail.com (Click to copy)
+  </span>
+</p>
     </section>
    <!-- <a href="mailto:urvishagothadiya1812@gmail.com?subject=AI/ML%20Internship%20Opportunity&body=Hi%20Yash,%0A%0AI%20found%20your%20portfolio%20impressive%20and%20would%20like%20to%20discuss%20opportunities.%0A%0ABest," 
    class="hire-btn" 
@@ -762,6 +776,7 @@
   </body>
 
 </html>
+
 
 
 
