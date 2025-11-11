@@ -649,9 +649,11 @@
           target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/Uv1812" target="_blank"><i
             class="fab fa-github"></i></a>
-       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=urvishagothadiya1812@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Urvisha,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect.">
-      <i class="fas fa-envelope"></i>
-    </a>
+      <a href="mailto:urvishagothadiya1812@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Yash,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect." 
+   onclick="smartMail(event, 'urvishagothadiya1812@gmail.com', 'Portfolio Inquiry', 'Hi Yash,%0A%0AI came across your portfolio and would love to connect.')" 
+   style="font-size: clamp(3rem, 10vw, 4.5rem); color: var(--gray);">
+  <i class="fas fa-envelope"></i>
+</a>
       </div>
       <p style="margin-top:3.5rem;">
         <span
@@ -661,7 +663,9 @@
       </p>
     </section>
 
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=urvishagothadiya1812@gmail.com&su=AI/ML%20Internship%20Opportunity&body=Hi%20Urvisha,%0A%0AI%20found%20your%20portfolio%20impressive%20and%20would%20like%20to%20discuss%20internship%20opportunities.%0A%0ABest,">
+    <a href="mailto:urvishagothadiya1812@gmail.com?subject=AI/ML%20Internship%20Opportunity&body=Hi%20Yash,%0A%0AI%20found%20your%20portfolio%20impressive%20and%20would%20like%20to%20discuss%20opportunities.%0A%0ABest," 
+   class="hire-btn" 
+   onclick="smartMail(event, 'urvishagothadiya1812@gmail.com', 'AI/ML Internship Opportunity', 'Hi Yash,%0A%0AI found your portfolio impressive and would like to discuss opportunities.%0A%0ABest,')">
   <i class="fas fa-paper-plane"></i> HIRE ME NOW
 </a>
 
@@ -673,6 +677,22 @@
     <script
       src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
+      function smartMail(event, email, subject, body) {
+  event.preventDefault(); // Stop default mailto
+
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  // Try mailto first
+  const opened = window.location.href = mailtoLink;
+
+  // If mailto fails (no app), fallback to Gmail web after 1 sec
+  setTimeout(() => {
+    if (document.hasFocus()) {
+      window.open(gmailLink, '_blank');
+    }
+  }, 1000);
+}
     particlesJS("particles", {
       particles: {
         number: { value: window.innerWidth < 768 ? 50 : 100 },
@@ -738,4 +758,5 @@
   </body>
 
 </html>
+
 
